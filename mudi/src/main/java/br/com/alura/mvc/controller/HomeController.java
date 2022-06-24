@@ -23,7 +23,10 @@ public class HomeController {
 		
 		List<Pedido> listaPedidos = new ArrayList<>();		
 		listaPedidos.add(pedido);
-		model.addAttribute("pedido", listaPedidos);
+		listaPedidos.add(pedido);
+		listaPedidos.add(pedido);
+
+		model.addAttribute("pedidos", listaPedidos);
 
 		return "home";
 		
