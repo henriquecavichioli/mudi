@@ -71,6 +71,10 @@ public class Pedido {
 	public LocalDate getDataDaEntrega() {
 		return dataDaEntrega;
 	}
+	
+	public LocalDate getDataDaEntregaBr() {
+		return dataDaEntrega;
+	}
 
 	public void setDataDaEntrega(LocalDate dataDaEntrega) {
 		this.dataDaEntrega = dataDaEntrega;
