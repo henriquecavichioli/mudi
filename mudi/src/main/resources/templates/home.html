@@ -34,7 +34,8 @@
 								Valor: <span th:text="${pedido.valorNegociado}"></span>
 							</div>
 							<div class="col-md-6">
-								Data da entrega: <span th:text="${pedido.dataDaEntrega}"></span>
+								Data da entrega: <span
+									th:text="${#temporals.format(pedido.dataDaEntrega, 'dd/MM/yyyy')}"></span>
 							</div>
 						</div>
 
@@ -47,10 +48,6 @@
 						<div>Descrição</div>
 						<div>
 							<textarea class="form-control" th:text="${pedido.descricao}">descrição do pedido</textarea>
-						</div>
-						<div>Data da Entrega</div>
-						<div>
-							<textarea class="form-control" th:text="${pedido.dataDaEntrega}"></textarea>
 						</div>
 					</div>
 					<div class="col-12 col-sm-4">

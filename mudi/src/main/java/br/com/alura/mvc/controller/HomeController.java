@@ -12,18 +12,17 @@ import br.com.alura.mvc.repository.PedidoRepository;
 
 @Controller
 public class HomeController {
-	
+
 	@Autowired
 	private PedidoRepository pedidoRepository;
-	
+
 	@GetMapping("/home")
 	public String home(Model model) {
-		
+
 		List<Pedido> pedidos = pedidoRepository.findAll();
 		model.addAttribute("pedidos", pedidos);
 		return "home";
-		
+
 	}
 
 }
-

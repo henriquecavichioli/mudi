@@ -1,25 +1,34 @@
-package br.com.alura.mvc.controller;
+package br.com.alura.mvc.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotBlank;
+
 import br.com.alura.mvc.model.Pedido;
 
 public class DtoPedido {
-	
-	private Long id;
 
+	private Long id;
+	
+	@NotBlank //NotBlank.requisicaoNovoPedido.nomeProduto=O campo nome do produto é obrigatário
 	private String nomeProduto;
+	
+	@NotBlank
 	private String urlImagem;
+	
+	@NotBlank
 	private String urlProduto;
+	
 	private String descricao;
 	private BigDecimal valorNegociado;
 	private LocalDate dataDaEntrega;
-	
-	public DtoPedido() {}
-	
+
+	public DtoPedido() {
+	}
+
 	public Pedido toPedido() {
-		
+
 		Pedido pedido = new Pedido();
 		pedido.setNomeProduto(nomeProduto);
 		pedido.setUrlImagem(urlImagem);
@@ -27,9 +36,8 @@ public class DtoPedido {
 		pedido.setDescricao(descricao);
 		pedido.setValorNegociado(valorNegociado);
 		pedido.setDataDaEntrega(dataDaEntrega);
-		
 		return pedido;
-		
+
 	}
 
 	public Long getId() {

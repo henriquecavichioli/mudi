@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import br.com.alura.mvc.Util.Util;
 @Entity
 public class Pedido {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +21,7 @@ public class Pedido {
 	private String descricao;
 	private BigDecimal  valorNegociado;
 	private LocalDate dataDaEntrega;
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -72,10 +74,6 @@ public class Pedido {
 		return dataDaEntrega;
 	}
 	
-	public LocalDate getDataDaEntregaBr() {
-		return dataDaEntrega;
-	}
-
 	public void setDataDaEntrega(LocalDate dataDaEntrega) {
 		this.dataDaEntrega = dataDaEntrega;
 	}
