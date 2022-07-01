@@ -22,7 +22,7 @@ public class PedidoController {
 	PedidoRepository pedidoRepository;
 
 	@GetMapping("formulario")
-	public String formulario(DtoPedido dtoPedido) {
+	public String formulario() {
 		return "pedido/formulario";
 	}
 
